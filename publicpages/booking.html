@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Booking</title>
+		<link href="../css/app.css" rel="stylesheet" type="text/css">
+		<link href="../css/foundation.css" rel="stylesheet" type="text/css">
+		<link href="../css/mystylesheet.css" rel="stylesheet" type="text/css">
+        <script src="../js/javascript.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=PT+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="top-bar">
+			<div class="top-bar-left">
+				<div class="grid-x grid-padding-x"> 
+					<div class="large-1">
+						<a href="../index.html"><img src="../assets/logo.svg" alt="Company Logo Image" class="logo"></a>
+						<!-- Image credits: https://www.freepik.com/free-vector/year-dragon-vector-chinesestyle-zodiac-symbol-isolated-white-background_51404498.htm#query=chinese%20dragon%20svg&position=8&from_view=keyword&track=ais&uuid=1a7a9885-bd0c-4a25-9b6a-7d66d03e3b97 -->
+					</div>
+					<div class="large-auto">
+						<ul class="menu">
+							<li><a href="./booking.html">Booking</a></li>
+							<li><a href="./foodmenu.html">Menu</a></li>
+							<li><a href="./jobslist.html">Jobs</a></li>
+							<li><a href="./contactus.html">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            <div class="top-bar-right">
+				<div class="grid-x grid-padding-x">
+					<a href="#"><img src="../assets/x_logo_img.jpg" alt="Twitter/X Logo Link" class="top-bar-icon"></a>
+					<!--Image credits: https://www.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_18246125.htm -->
+					<a href="#"><img src="../assets/instagramlogo_img.jpg" alt="Instagram Logo Link" class="top-bar-icon"></a> 
+					<!-- Image Credits: https://www.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_18246125.htm -->
+				</div>
+            </div>
+		</div>
+		<nav aria-label="You are here" role="navigation">
+			<ul class="breadcrumbs">
+				<li><a href="../index.html">Home</a></li>
+				<li class="disabled">Booking</li>
+			</ul>
+		</nav>
+		<div class="grid-container">
+			<div class="grid-y grid-padding-y medium-grid-frame shrink">
+				<div class="medium-6 text-center">
+					<h1>Ready to book a table?</h1>
+				</div>
+			</div>
+			<form id="bookingForm">
+				<div class="grid-container">
+					<div class="grid-x padding-x">
+						<div class="medium-4 cell">
+							<label>Email Address
+							<input id="bookemail" type="email" placeholder="example@outlook.com" required>
+							</label>
+						</div>
+						<div class="medium-3 cell">
+							<label>Table for?
+							<input id="tablenum" type="number" value="2" min="1" max="20" required>
+							</label>
+                            <label>Location?
+                                <select id="booklocation">
+                                    <option value="peterborough" selected>Peterborough, PE1 5BW</option>
+                                    <option value="cambridge">Cambridge, CB1 1PT</option>
+                                </select>
+                            </label>
+						</div>
+						<div class="medium-3 cell">
+							<label>Date
+								<input id="bookdate" type="date" required>
+							</label>
+							<label>Time
+								<input id="booktime" type="time" required>
+							</label>
+						</div>
+						<div class="medium-2 cell medium-shrink">
+							<label>Pay deposit
+								<input class="payment-methods temp-button" id="gPaybutton" type="button"> <!--Needs transperency -->
+								<input class="payment-methods temp-button" id="applePayButton" type="button">
+							</label>
+							
+						</div>
+					</div>
+                    <div class="grid-y grid-padding-y">
+                        <div class="medium-6">
+                            <p>If you are wondering about the price of reservation</p>
+                            <p class="help-text" id="depositHelpText">We take a £10 deposit to help prevent false bookings and make sure our restaunts are not filled with empty reserved tables. This deposit is instantly returned upon one of our staff seating you or if you cancel 24hrs beforehand.</p>
+                        </div>
+                        <div class="large-6 text-center"> <!--Temporary-->
+                            <button class="button" id="booksubmit" type="submit">Confirm booking</button>
+                        </div>
+                    </div>
+				</div> 
+			</form>
+		</div>
+	</body>
+</html>

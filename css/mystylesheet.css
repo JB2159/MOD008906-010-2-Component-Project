@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-color: #ffec9e;
+}
+
+p, h2, h3, h4, h5, a {
+    font-family: "Chivo Mono";
+    font-weight: 540;
+}
+small {
+    font-family: "Chivo Mono"
+}
+
+h1 {
+    font-family: "Permanent Marker";
+}
+
+.chivo-mono-reg {
+  font-family: "Chivo Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+#main-splash{
+	background-blend-mode: wrap;
+	background-image: url("../assets/cooking.jpeg");
+	/* https://www.shutterstock.com/image-photo/african-american-female-chef-having-fun-2150289105 */
+	background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+.main-splash-text{
+	text-align: center;
+	padding-top: 15%;
+	padding-bottom: 15%;
+	color: antiquewhite;
+	text-shadow: -4px 4px #000000;
+	font-family: "Permanent Marker";
+	font-weight: 400;
+	font-size: 92px;
+}
+.logo{
+    width: 80%;
+    min-width: 50px;
+    margin-bottom: 2%;
+    background-color: antiquewhite;
+    border: thin;
+    border-radius: 50px;
+}
+.logo:hover{
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px #F20C00;
+}
+#main-content{
+    background-color:rgba(255,255,255, 0.3);
+    padding-left: 1%;
+    border-radius: 20px
+}
+#main-content2{
+	padding-top: 5%;
+    background-color:rgba(255,255,255, 0.3);
+    border-radius: 20px;
+}
+#food-menu-header{
+	text-align: center;
+}
+#home-foodimage1{
+	width: 90%;
+    border-radius: 10px;
+	padding: 5px
+	
+}
+#contactus-header {
+	text-align: center;
+}
+.contactus-page-content{
+	text-align: center;
+}
+.top-bar-icon{
+	width: 60px; /* image needs dimensions reducing so this can be changed to scaling */
+	height: 60px;
+	border-radius: 25%;
+	padding: 5%;
+}
+.top-bar-icon:hover{
+	box-shadow: 0px 0px 10px #fff;
+}
+#home_foodimg2 {
+	width: 70%;
+	margin-left: 20%;
+    border-style: double;
+    border-color: antiquewhite;
+    border-radius: 10px;
+}
+.food-allergy-section {
+	padding-bottom: 1%;
+}
+.food-allergy-section-symbolheader {
+	text-align: center;
+}
+.top-bar {
+	background: rgb(2,0,36);
+	background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(10,85,115,1) 80%);
+	/* Temporary */
+}
+
+.permanent-marker-regular {
+	font-family: "Permanent Marker", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+.pt-mono-regular {
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.payment-methods{
+    width: 50%;
+    border:medium;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.order-screen{
+	background-image: url("../assets/orderly.jpg");
+	/*Image credits: https://pxhere.com/en/photo/1609515?utm_content=shareClip&utm_medium=referral&utm_source=pxhere*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+    height:100%;
+	backdrop-filter: blur(8px);
+}
+
+.order-screen-text{
+	color: white;
+	text-shadow: -1px 1px 10px #000000;
+}
+
+.splash-under-bar{
+	padding-bottom: 3%;
+	padding-top: 0.5%;
+}
+
+.splash-under-bar-cells{
+	padding-bottom: 2%;
+	background-color: #F20C00;
+	border-radius: 20px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	color: white;
+}
+
+gmp-map {
+  height: 100%;
+}
+.default-inactive-menu{
+	display:none;
+}
+form:valid button {
+    pointer-events: initial;
+}
+form:invalid button {
+    background: #7B7B7B;
+    pointer-events: none;
+}
+#js_order_code{
+	
+}
+
+.top-menu-bar {
+    color: #A70F12;
+}
+
+.temp-button{
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: 100%;
+	padding-left: 50%;
+	padding-bottom: 50%;
+	
+}
+#gPaybutton{
+	background-image: url("../assets/google-pay_6124998.png");
+	/*Image Source: https://www.freepik.com/icon/google-pay_6124998#fromView=search&page=1&position=0&uuid=ad9c9f02-4d11-42ac-bf6c-48a26374f119 */
+}
+#applePayButton{
+	background-image: url("../assets/apple-pay_5968500.png");
+	/*Image Source: https://www.freepik.com/icon/apple-pay_5968500#fromView=sear */
+}
+#total{
+	font-weight: 800;
+}
+#basket-items{
+	
+}
+#company-team-photo{
+    width: 70%;
+    padding-bottom: 50%;
+    border: 2px solid #FFF6F6;
+    padding: 2px;
+    
+}
+#jobslist-main-blurb{
+    padding-top: 4%;
+}
+#food-menu-header-image{
+    width: 20%;
+}
+
+#main-content2-section{
+    padding-top: 3%;
+}
+.text-content{
+    background-color:rgba(255,255,255, 0.3);
+    border-radius: 20px;
+}
+.jobs-list-second-line{
+    padding-top: 5%;
+}
+.button{
+    background-color: rgba(2,0,36,1);
+    font-family: "Chivo Mono";
+    font-weight: 300;
+}
+.google-maps-image{
+    width:60%;
+    border-radius: 15px;
+}

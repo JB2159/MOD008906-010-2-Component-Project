@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Food Menu</title>
+		<link href="../css/app.css" rel="stylesheet" type="text/css">
+		<link href="../css/foundation.css" rel="stylesheet" type="text/css">
+		<link href="../css/mystylesheet.css" rel="stylesheet" type="text/css">
+        <script src="../js/javascript.js"></script>
+		
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=PT+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<script type="module" src="../js/javascript.js"></script>
+		<div class="top-bar">
+			<div class="top-bar-left">
+				<div class="grid-x grid-padding-x"> 
+					<div class="large-1">
+						<a href="../index.html"><img src="../assets/logo.svg" alt="Company Logo Image" class="logo"></a>
+						<!-- Image credits: https://www.freepik.com/free-vector/year-dragon-vector-chinesestyle-zodiac-symbol-isolated-white-background_51404498.htm#query=chinese%20dragon%20svg&position=8&from_view=keyword&track=ais&uuid=1a7a9885-bd0c-4a25-9b6a-7d66d03e3b97 -->
+					</div>
+					<div class="large-auto">
+						<ul class="menu">
+							<li><a href="booking.html">Booking</a></li>
+							<li><a href="./foodmenu.html">Menu</a></li>
+							<li><a href="jobslist.html">Jobs</a></li>
+							<li><a href="contactus.html">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            <div class="top-bar-right">
+				<div class="grid-x grid-padding-x">
+					<a href="#"><img src="../assets/x_logo_img.jpg" alt="Twitter/X Logo Link" class="top-bar-icon"></a>
+					<!--Image credits: https://www.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_18246125.htm -->
+					<a href="#"><img src="../assets/instagramlogo_img.jpg" alt="Instagram Logo Link" class="top-bar-icon"></a>
+					<!-- Image Credits: https://www.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_18246125.htm -->
+				</div>
+            </div>
+		</div>
+		<nav aria-label="You are here" role="navigation">
+			<ul class="breadcrumbs">
+				<li><a href="../index.html">Home</a></li>
+				<li class="disabled">Food Menu</li>
+			</ul>
+		</nav>
+		<div class="grid-container">
+			<div class="grid-y medium-grid-frame">
+				<div class="cell shrink header medium-cell-block-container">
+					<h1 id="food-menu-header">Food Menu and Orders</h1>
+				</div>
+			</div>
+			<div class="grid-x padding-x">
+				<div class="cell medium-4">
+					<p>Getting hungry?</p>
+                    <p>Why not order now and eat at home?</p>
+                    <h3>£<span id="total">0</span></h3>
+					<button class="button" onClick="basketCheckout()">CHECKOUT</button>
+					<p id="basket-items">Order items</p>
+                    <small>Delivery costs £2.00</small>
+                </div>
+				<div class="cell medium-6">
+				  <div>
+					  <button class="button" onclick="ShowFoodMenuStarter()">Starters</button>
+					  <button class="button" onclick="ShowFoodMenuMains()">Mains</button>
+					  <button class="button" onclick="ShowFoodMenuDeserts()">Deserts</button>
+					  <button class="button" onclick="ShowFoodMenuSides()">Sides</button>
+                      
+					  <!-- Using Y grid inside so everything displays like a list -->
+                      <!--MUST BE IN THE FOLLOWING FORMAT 
+                        <div class="class_goes_here" "style: none"  id="matching_javascript_id"></div>
+                        -->
+					  
+					  <div class="grid-y grid-padding-y default-inactive-menu text-content" id="jsbutton-selected-starters">
+						  <div class="small-1">
+                              <img src="../assets/chickenballs_sauce_image.jpg" alt="Image of Chicken balls coated in sauce">
+							  <!--Image Source: https://www.flickr.com/photos/andrewcurrie/7049690861 -->
+							  <p>6 Chicken Balls</p>
+                              <p>£4.00 </p>
+                              <button class="button" onClick="basketAdd('ChickenBalls', 4, 1)">Order</button>
+						  </div>
+						  <div class="small-1">
+						  	<p><img alt="food">2 Spring rolls</p>
+                              <p>£2.00</p>
+                              <button class="button" onClick="basketAdd('SpringRolls', 2, 1)">Order</button>
+							
+						  </div>
+						  <div class="small-1">
+						  	<p>Dumplings</p>
+                              <p>£3.00</p>
+                              <button class="button" onClick="basketAdd('Dumplings', 3, 1)">Order</button>
+						  </div>
+						  <div class="small-1">
+						  	<p>Pork Pastry Puffs</p>
+                              <p>£2.00</p>
+                              <button class="button" onClick="basketAdd('PorkPuffs', 2, 1)">Order</button>
+						  </div>
+						  <div class="small-1">
+						  	<p>Prawn Pot Stickers</p>
+                              <p>£4.00</p>
+                              <button class="button" onClick="basketAdd('PrawnPotStick', 4, 1)">Order</button>
+						  </div>
+					  </div>
+                      <div class="grid-y grid-padding-y default-inactive-menu text-content" id="jsbutton-selected-mains">
+                          <img src="../assets/6453176819_abd9734100_o.jpg" alt="image of Kung Po chicken served onto a plate">
+                          <!-- Image Source: https://www.flickr.com/photos/71266843@N03/6453176819 -->
+                          <div class="small-1">
+                              <p>£6.00</p>
+							  <p>Duck Pancakes</p>
+                              <button class="button" onClick="basketAdd('DuckPancake', 6, 2)">Order</button>
+						  </div>
+						  <div class="small-1">
+						  	<p>Chicken in Kung Pao Sauce</p>
+                              <p>£5.00</p>
+                              <button class="button" onClick="basketAdd('ChickenKungPao', 5, 1)">Order</button>
+						  </div>
+						  <div class="small-1">
+						  	<p>King Prawn Curry</p>
+                              <p>£8.00</p>
+                              <button class="button" onClick="basketAdd('KingPrawnCurry', 8, 1)">Order</button>
+						  </div>
+                      </div>
+                      <div class="grid-y grid-padding-y default-inactive-menu text-content" id="jsbutton-selected-deserts">
+                          <img src="../assets/stickyricedumplingimage.jpg" alt="">
+                          <!--Image Source: https://www.flickr.com/photos/songzhen/18568508691 -->
+                          <div class="small-1">
+							  <p>Mai Lai Go, Steamed Cake</p>
+                              <p>£6.00</p>
+                              <button class="button" onClick="basketAdd('MaiLaiGo', 6, 1)">Order</button>
+						  </div>
+						  <div class="small-1">
+						  	<p>Sticky rice dumplings</p>
+                              <p>£4.00</p>
+                              <button class="button" onClick="basketAdd('StickRiceDumpling', 4, 1)">Order</button>
+						  </div>
+						  <div class="small-1">
+						  	<p>Fat Goh</p>
+                              <p>£4.00</p>
+                              <button class="button" onClick="basketAdd('Fat Goh', 6, 1)">Order</button>
+						  </div>
+                      </div>
+                      <div class="grid-y grid-padding-y default-inactive-menu text-content" id="jsbutton-selected-sides">
+                          <img src="../assets/eggfriedrice.jpeg" alt="Photo close up of Egg Fried Rice">
+						  <!-- Image Source: https://pxhere.com/en/photo/561593 -->
+                          <div class="small-1">
+                              <p>6 Chicken balls</p>
+                              <p>£4.00</p>
+                              <button class="button" onClick="basketAdd('ChickenBalls', 4, 1)">Order</button>
+                          </div>
+                          <div class="small-1">
+                              <p>Chips</p>
+                              <p>£3.00</p>
+                              <button class="button" onClick="basketAdd('Chips', 3, 1)">Order</button>
+                          </div>
+                          <div class="small-1">
+                              <p>Egg fried Rice</p>
+                              <p>£3.00</p>
+                              <button class="button" onClick="basketAdd('EggRice', 3, 1)">Order</button>
+                          </div>
+						  <div class ="small-1">
+						  	<p>Rice</p>
+                              <p>£3.00</p>
+                              <button class="button" onClick="basketAdd('Rice', 3, 1)">Order</button>
+						  </div>
+                      </div>
+                      
+					  
+					  
+				  </div>
+				</div>
+			</div>
+			<div class="grid-y padding-y">
+				<div class="large-6 food-allergy-section">
+					<h3>Food Allergy Information</h3>
+					<p>Some but not all food may contain nuts, milk, shellfish or more. Some foods additionally may be approrpriate for a Vegan diet. To help you distinguish basket. Symbols have been created that explicilty label any allergy problems with certain foods. If there is a particular food with an item to it that you do not wish to eat, you can always add special instructions to an order or if ordering in house simply ask the waiter to alter your order slightly! </p>
+				</div>
+				<div class="large-6">
+					<h4 class="food-allergy-section-symbolheader">Symbol Key</h4>
+				</div>
+			</div>
+			<div class="grid-x padding-x">
+				<div class="cell medium-3">
+					<p>Placeholder for a symbol of nuts</p>
+				</div>
+			  <div class="cell medium-3">
+					<p>Placeholder for a symbol of milk</p>
+			  </div>
+				<div class="cell medium-3">
+					<p>Placeholder for a symbol of shellfish</p>
+				</div>
+				<div class="cell medium-3">
+					<p>Placeholder for a symbol of Vegan Friendly</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
